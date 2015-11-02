@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-11-02T02:38:22.000Z</updated>
+  <updated>2015-11-02T05:33:16.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Collection(1)]]></title>
+    <link href="http://yoursite.com/2015/11/01/container/"/>
+    <id>http://yoursite.com/2015/11/01/container/</id>
+    <published>2015-11-02T04:47:59.000Z</published>
+    <updated>2015-11-02T05:33:16.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="/img/full_container_taxonomy.png" width="80%" height="40%"><br><a id="more"></a><br> This picture represents all elements’ relationship in Java’s container. Before going deep, first there are some basis of UML need to review.<br> (1): Solid-line square =&gt; class<br> (2): break-line square =&gt; interface<br> (3): empty Arrow with solid line =&gt; Generalization OR extends OR inheritance<br> (4): empty Arrow with break line =&gt; Realization OR implements </p>
+<h2 id="1-_Collection_Interface">1. Collection Interface</h2><p>Collection Interface doesn’t provide direct implementation. all the container classes JDK provides are implemented by colection interface’s son interface: list and set. Collection interface represents a rule in here. the elements it includes must follow one or more rules. For example, some classes allow repeat, some not; some must insert by order, some are random. Some support sorting, some not, etc.</p>
+<p>The whole classes which implements <code>Collection</code> provides two standard constructor:<br>(1) without parameter. Used to create an empty collection<br>(2) with parameter. Used to create a new collection with the same value of passed-by collection. </p>
+<h2 id="2-_List_Interface">2. List Interface</h2><p>As direct interface of <code>Collection</code>. <code>List</code> represents ordered collection, or maintain elements order by using special rule. The major classes implements it are: <code>ArrayList</code>, <code>LinkedList</code>,<code>Vector</code>,<code>Stack</code>.</p>
+<h3 id="2-1_ArrayList">2.1 ArrayList</h3><p>ArrayList<code>is a dynamic array. It can store any elements even include</code>null`. An ArrayList has an initial volume to contain 10 elements. Everytime when add new elements into arraylist, it will check volume and increase volume before overflow automatically. ArrayList is good at random access, also it is asynchronous.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="/img/full_container_taxonomy.png" width = "80%" height ="40%"><br>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Iterator Interface Learning Note(1)]]></title>

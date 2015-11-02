@@ -42,13 +42,15 @@
 
 
 <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xinbo's Home">
-<meta property="og:url" content="http://yoursite.com/tags/leetcode/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Collection(1)">
+<meta property="og:url" content="http://yoursite.com/2015/11/01/container/index.html">
 <meta property="og:site_name" content="Xinbo's Home">
 <meta property="og:description">
+<meta property="og:image" content="http://yoursite.com/img/full_container_taxonomy.png">
+<meta property="og:updated_time" content="2015-11-02T05:33:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xinbo's Home">
+<meta name="twitter:title" content="Collection(1)">
 <meta name="twitter:description">
 
 
@@ -59,7 +61,7 @@
   };
 </script>
 
-  <title> Tag: leetcode | Xinbo's Home </title>
+  <title> Collection(1) | Xinbo's Home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -96,7 +98,7 @@
 
 
 
-  <div class="container one-column ">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -202,44 +204,103 @@
       <div class="main-inner">
         <div id="content" class="content"> 
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        leetcode
-        <small>Tag</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
 
-  <article class="post post-type-normal"itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2015/10/13/Move_Zeros/" itemprop="url">
-              <span itemprop="name">Move Zeroes</span>
-            </a>
-        
-      </h1>
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Collection(1)
+            
+          
+        </h1>
+      
 
       <div class="post-meta">
-        <time class="post-time" datetime="2015-10-13T18:21:22.000Z" itemprop="dateCreated" content="2015-10-13"> 10-13 </time>
-      </div>
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-11-01T22:47:59-06:00" content="2015-11-01">
+            2015-11-01
+          </time>
+        </span>
 
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/11/01/container/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/01/container/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
     </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="/img/full_container_taxonomy.png" width="80%" height="40%"><br><a id="more"></a><br> This picture represents all elements’ relationship in Java’s container. Before going deep, first there are some basis of UML need to review.<br> (1): Solid-line square =&gt; class<br> (2): break-line square =&gt; interface<br> (3): empty Arrow with solid line =&gt; Generalization OR extends OR inheritance<br> (4): empty Arrow with break line =&gt; Realization OR implements </p>
+<h2 id="1-_Collection_Interface">1. Collection Interface</h2><p>Collection Interface doesn’t provide direct implementation. all the container classes JDK provides are implemented by colection interface’s son interface: list and set. Collection interface represents a rule in here. the elements it includes must follow one or more rules. For example, some classes allow repeat, some not; some must insert by order, some are random. Some support sorting, some not, etc.</p>
+<p>The whole classes which implements <code>Collection</code> provides two standard constructor:<br>(1) without parameter. Used to create an empty collection<br>(2) with parameter. Used to create a new collection with the same value of passed-by collection. </p>
+<h2 id="2-_List_Interface">2. List Interface</h2><p>As direct interface of <code>Collection</code>. <code>List</code> represents ordered collection, or maintain elements order by using special rule. The major classes implements it are: <code>ArrayList</code>, <code>LinkedList</code>,<code>Vector</code>,<code>Stack</code>.</p>
+<h3 id="2-1_ArrayList">2.1 ArrayList</h3><p>ArrayList<code>is a dynamic array. It can store any elements even include</code>null`. An ArrayList has an initial volume to contain 10 elements. Everytime when add new elements into arraylist, it will check volume and increase volume before overflow automatically. ArrayList is good at random access, also it is asynchronous.</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/29/Iterator_class_research_in_Java/" rel="next">Iterator Interface Learning Note(1)</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
-  
  </div>
 
         
 
+        
+          <div class="comments" id="comments">
+            
+              <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              </div>
+            
+          </div>
         
       </div>
 
@@ -256,6 +317,15 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
       
 
       <section class="site-overview">
@@ -325,6 +395,17 @@
       </section>
 
       
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_Collection_Interface"><span class="nav-number">1.</span> <span class="nav-text">1. Collection Interface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_List_Interface"><span class="nav-number">2.</span> <span class="nav-text">2. List Interface</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1_ArrayList"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 ArrayList</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
 
     </div>
   </aside>
@@ -366,12 +447,6 @@
   
   
   
-    <script type="text/javascript">
-      postMotionOptions = {stagger: 100, drag: true};
-    </script>
-  
-
-  
     
     
 
@@ -379,9 +454,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'wwwxinbous';
-      var disqus_identifier = 'tags/leetcode/index.html';
-      var disqus_title = '';
-      var disqus_url = '';
+      var disqus_identifier = '2015/11/01/container/';
+      var disqus_title = 'Collection(1)';
+      var disqus_url = 'http://yoursite.com/2015/11/01/container/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -392,6 +467,8 @@
       }
 
       run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
       
     </script>
   
@@ -418,6 +495,165 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
