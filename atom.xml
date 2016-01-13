@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-11-02T05:33:16.000Z</updated>
+  <updated>2016-01-13T03:20:21.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,57 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Harmonic Analyzer]]></title>
+    <link href="http://yoursite.com/2016/01/12/Harmonic-Analyzer/"/>
+    <id>http://yoursite.com/2016/01/12/Harmonic-Analyzer/</id>
+    <published>2016-01-13T03:14:09.000Z</published>
+    <updated>2016-01-13T03:20:21.000Z</updated>
+    <content type="html"><![CDATA[<p>Before introduce our implementation about this analyzer, we are excited to show some pictures of our work.</p>
+<h3 id="Our_Machine">Our Machine</h3><h3 id="Our_Result">Our Result</h3>]]></content>
+    <summary type="html">
+    <![CDATA[<p>Before introduce our implementation about this analyzer, we are excited to show some pictures of our work.</p>
+<h3 id="Our_Machine">Our M]]>
+    </summary>
+    
+      <category term="Project" scheme="http://yoursite.com/tags/Project/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[singleton Pattern Learning]]></title>
+    <link href="http://yoursite.com/2015/11/04/singleton-pattern/"/>
+    <id>http://yoursite.com/2015/11/04/singleton-pattern/</id>
+    <published>2015-11-04T19:17:22.000Z</published>
+    <updated>2015-11-04T20:28:02.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="/img/114632394553185794l.jpg" alt=""></p>
+<p>Singleton pattern is the high frequent used pattern. Altough its simple, but there are still many aspect we need to focus on. The post lists several representation of singleton and analyze their advantages and disadvantages.<br><a id="more"></a></p>
+<h2 id="Lazy_and_Eager_Initilization">Lazy and Eager Initilization</h2><p>The difference of lazy and eager version singleton is whether create a new instance because of demand. </p>
+<h4 id="Lazy_one">Lazy one</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</span><br><span class="line">			instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> instance;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Eager_one">Eager one</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> instance;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>If the program will always need an instance, or it the cost of creating the instance is not too large in term of time/ resource, eager initilization is a better choice.</p>
+<h3 id="Summary">Summary</h3><p>The above code have some problems, if multiple threads call getInstance() at the same time, that will create multiple instance. So it means such style can only work under single thread / process environment.</p>
+<h2 id="Double_checked_locking_pattern">Double checked locking pattern</h2><p>This method is a way to implement lock in Java, the double means there are two times of <code>instance == null</code> checking. The first time is outside of synchronization block, the second one is inside. The reason to check two times is because there might have several threads got into <code>if</code> block at the same time. if we don’t double check inside if block, instances over 1 might be created.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</span><br><span class="line">		synchroized (Singleton.class) &#123;</span><br><span class="line">			<span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</span><br><span class="line">				instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Seems the above code is perfect. But, it still has some problems. Because <code>instance = new Singleton();</code> is not a atomic operation. When JVM execute this code, it did three things.</p>
+<p>1: allocate memeory to instance.<br>2: call Singleton’s constructor to initialize its member variables.<br>3: point this instance to allocated memeory location. </p>
+<p>After the step 3, the instance is non null. But JIT in JVM exist code optimization. So that means step 2 and 3’s order in unguranteed. The final execution sequence might be 1-2-3 or 1-3-2; If is later, when thread 1 execute step 3, before step 2. thread 2 come in and check instance already created, just return this instance. But at this time the instance is non null but also no intialized. So the instance used by thread 2 will return exception.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="/img/114632394553185794l.jpg" alt=""></p>
+<p>Singleton pattern is the high frequent used pattern. Altough its simple, but there are still many aspect we need to focus on. The post lists several representation of singleton and analyze their advantages and disadvantages.<br>]]>
+    
+    </summary>
+    
+      <category term="design pattern" scheme="http://yoursite.com/tags/design-pattern/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Collection(1)]]></title>
     <link href="http://yoursite.com/2015/11/01/container/"/>
     <id>http://yoursite.com/2015/11/01/container/</id>
     <published>2015-11-02T04:47:59.000Z</published>
-    <updated>2015-11-02T05:33:16.000Z</updated>
+    <updated>2015-11-04T19:18:42.000Z</updated>
     <content type="html"><![CDATA[<p><img src="/img/full_container_taxonomy.png" width="80%" height="40%"><br><a id="more"></a><br> This picture represents all elements’ relationship in Java’s container. Before going deep, first there are some basis of UML need to review.<br> (1): Solid-line square =&gt; class<br> (2): break-line square =&gt; interface<br> (3): empty Arrow with solid line =&gt; Generalization OR extends OR inheritance<br> (4): empty Arrow with break line =&gt; Realization OR implements </p>
 <h2 id="1-_Collection_Interface">1. Collection Interface</h2><p>Collection Interface doesn’t provide direct implementation. all the container classes JDK provides are implemented by colection interface’s son interface: list and set. Collection interface represents a rule in here. the elements it includes must follow one or more rules. For example, some classes allow repeat, some not; some must insert by order, some are random. Some support sorting, some not, etc.</p>
 <p>The whole classes which implements <code>Collection</code> provides two standard constructor:<br>(1) without parameter. Used to create an empty collection<br>(2) with parameter. Used to create a new collection with the same value of passed-by collection. </p>
@@ -30,6 +76,8 @@
     <![CDATA[<p><img src="/img/full_container_taxonomy.png" width = "80%" height ="40%"><br>]]>
     
     </summary>
+    
+      <category term="java Learning" scheme="http://yoursite.com/tags/java-Learning/"/>
     
   </entry>
   
