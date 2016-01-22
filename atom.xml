@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-22T03:25:22.000Z</updated>
+  <updated>2016-01-22T03:52:00.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,10 +19,16 @@
     <link href="http://yoursite.com/2016/01/12/Harmonic-Analyzer/"/>
     <id>http://yoursite.com/2016/01/12/Harmonic-Analyzer/</id>
     <published>2016-01-13T03:14:09.000Z</published>
-    <updated>2016-01-22T03:25:22.000Z</updated>
-    <content type="html"><![CDATA[<iframe src="/img/harmonic-analyzer.pdf" style="width:700px; height:700px; padding-left: 80px;" frameborder="0" allowfullscreen webkitallowfullscreen=""></iframe> ]]></content>
+    <updated>2016-01-22T03:52:00.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="/img/analyzer.jpg" alt=""><br><a id="more"></a><br>We already put the video of our harmonic analyzer in youtube.</p>
+<iframe width="750" height="450" src="https://www.youtube.com/watch?v=x4R5zV_sqMQ" frameborder="0" allowfullscreen></iframe>
+
+
+<p>For your convenience, please read this PDF in full screen.</p>
+<iframe src="/img/harmonic-analyzer.pdf" style="width:750px; height:700px;" frameborder="0" allowfullscreen webkitallowfullscreen=""></iframe> ]]></content>
     <summary type="html">
-    <![CDATA[<iframe src="/img/harmonic-analyzer.pdf" style="width:700px; height:700px; padding-left: 80px;" frameborder="0" allowfullscreen webkitallowf]]>
+    <![CDATA[<p><img src="/img/analyzer.jpg" alt=""><br>]]>
+    
     </summary>
     
       <category term="Project" scheme="http://yoursite.com/tags/Project/"/>
